@@ -14,9 +14,28 @@ node -v
 npm -v
 ```
 
-## Packages
+## Clone Repository
+Open terminal and type the following command to clone the repository:
 ```javascript
-// This npm package will be installed globally in your machine.
-npm install -g typescript
+git clone https://github.com/innovation-stack/ng-freshers.git
 ```
+
+## Install Angular
+```javascript
+npm install -g @angular/cli
+```
+
+## Install Packages
+```javascript
+// This will install all project's dependencies and dev-dependencies listed in package.json
+cd ng-freshers
+npm install
+```
+
+## Run
+Open terminal and type the following command:
+```javascript
+npm start
+```
+Once the project is compiled, head over to your favorite browser and enter URL ```http://localhost:4200``` to access the application.
 
