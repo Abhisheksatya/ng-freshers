@@ -1,0 +1,23 @@
+<div class="card text-white bg-dark mb-3">
+  <div class="card-header">
+    Display todo items (@Input())
+  </div>
+  <div class="card-body">
+    <div class="card-text">
+      <div class="list-group">
+        <div class="list-group-item">
+          <h4>Todo Item</h4>
+          <app-todo-item [data]="todoItem"></app-todo-item>
+        </div>
+        <div class="list-group-item">
+          <h4>Another Todo Item</h4>
+          <app-todo-item [data]="anotherTodoItem"></app-todo-item>
+        </div>
+        <div class="list-group-item">
+          <h4>Final Todo Item</h4>
+          <app-todo-item [data]="finalTodoItem"></app-todo-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
