@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card text-white bg-primary mb-3">
+        <div class="card-header">Todo Items (ngFor)</div>
+        <div class="card-body">
+          <div class="card-text">
+            <table class="table table-hover table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">Text</th>
+                  <th scope="col">Target Date</th>
+                  <th scope="col">Completed</th>
+                  <th>Severity</th>
+                  <th>Penalty Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let todo of todos">
+                  <td>{{ todo.text | uppercase }}</td>
+                  <td>{{ todo.targetDate | date:'mediumDate' }}</td>
+                  <td>
+                    <span [innerHTML]="todo.completed | todoStatus"></span>
+                  </td>
+                  <td>{{ todo.severity | todoSeverity | lowercase }}</td>
+                  <td>{{ todo.amountPenalizedIfNotCompleted | currency:'USD' }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+.container {
+  margin-top: 20px;;
+}
+
+::ng-deep .red {
+  color: red;
+}
+
+::ng-deep .green {
+  color: green;
+}

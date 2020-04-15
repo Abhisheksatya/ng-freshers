@@ -1,0 +1,11 @@
+<div class="card text-white bg-info mb-3">
+  <div class="card-header">Tracking Clicks</div>
+  <div class="card-body">
+    <div class="alert alert-danger" *ngIf="message">{{ message }}</div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-primary" [trackClick]="'Ready'" (clicked)="onClicked($event)">Ready</button>
+      <button type="button" class="btn btn-secondary" trackClick="Steady" (clicked)="onClicked($event)">Steady</button>
+      <button type="button" class="btn btn-danger" trackClick="Go" (clicked)="onClicked($event)">Go</button>
+    </div>
+  </div>
+</div>

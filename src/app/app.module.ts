@@ -3,6 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { DatabindingModule } from './01_databinding/databinding.module';
+import { BuiltInDirectivesModule } from './02_built-in-directives/built-in-directives.module';
+import { PipesModule } from './03_pipes/pipes.module';
+import { DirectivesModule } from './04_directives/directives.module';
+
+const FEATURE_MODULES_TAUGHT = [
+  // DatabindingModule,
+  // BuiltInDirectivesModule
+  // PipesModule
+  DirectivesModule
+];
 
 @NgModule({
   declarations: [
@@ -10,7 +20,7 @@ import { DatabindingModule } from './01_databinding/databinding.module';
   ],
   imports: [
     BrowserModule,
-    DatabindingModule
+    ...FEATURE_MODULES_TAUGHT
   ],
   providers: [],
   bootstrap: [AppComponent]

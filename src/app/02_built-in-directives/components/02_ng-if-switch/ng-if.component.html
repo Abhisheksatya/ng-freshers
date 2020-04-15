@@ -1,0 +1,13 @@
+<div class="jumbotron" *ngIf="todo">
+  <h1 class="display-4">{{ todo.text }}</h1>
+  <div class="lead" [ngSwitch]="todo.completed">
+    <div class="alert alert-success" *ngSwitchCase="true">
+      Successfully Completed!!!
+    </div>
+    <div class="alert alert-danger" *ngSwitchCase="false">
+      Not Yet!!!
+    </div>
+  </div>
+  <hr class="my-4">
+  <button class="btn btn-primary" (click)="closeTodo()">Close</button>
+</div>

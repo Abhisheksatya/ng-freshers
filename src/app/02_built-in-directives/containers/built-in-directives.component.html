@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-7">
+      <app-ng-for [todos]="todoItems" [selectedTodo]="selectedTodo" (todoSelected)="onTodoSelected($event)"></app-ng-for>
+    </div>
+    <div class="col-5">
+      <app-ng-if [todo]="selectedTodo" (todoClosed)="onTodoClosed()"></app-ng-if>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-7">
+      <app-ng-if-template [todos]="todos"></app-ng-if-template>
+    </div>
+  </div>
+</div>

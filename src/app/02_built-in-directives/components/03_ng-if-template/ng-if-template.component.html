@@ -1,0 +1,28 @@
+<div class="card text-white bg-primary mb-3">
+  <div class="card-header">Todo Items (ngFor)</div>
+  <div class="card-body">
+    <div class="card-text">
+      <table class="table table-hover table-dark" *ngIf="todos && todos.length > 0; else noTodos">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Text</th>
+            <th scope="col">Completed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let todo of todos">
+            <td>{{ todo.id }}</td>
+            <td>{{ todo.text }}</td>
+            <td>{{ todo.completed }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<ng-template #noTodos>
+  <div class="alert alert-danger">No Todos Available!!!</div>
+  <button type="button" class="btn btn-info">Create a new Todo</button>
+</ng-template>
