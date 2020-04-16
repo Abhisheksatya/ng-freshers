@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col">
+    <div class="card border-dark mb-3">
+      <div class="card-header">Create Todo</div>
+      <div class="card-body text-dark">
+        <div class="card-text">
+          <form class="needs-validation" novalidate [formGroup]="todoForm"
+            (ngSubmit)="onFormSubmit()">
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="text">Text</label>
+                <input type="text" class="form-control" id="text" formControlName="text"
+                  [ngClass]="getControlValidationClasses(textControl)">
+                <div class="valid-feedback" *ngIf="textControl.valid">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback" *ngIf="textControl.touched && textControl.errors?.required">
+                  This field is required
+                </div>
+                <div class="invalid-feedback" *ngIf="textControl.touched && textControl.errors?.minlength">
+                  Atleast 5 characters are required
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="description">Description</label>
+                <input type="text" class="form-control" id="description" formControlName="description"
+                  [ngClass]="getControlValidationClasses(descriptionControl)">
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback" *ngIf="descriptionControl.touched && descriptionControl.errors?.required">
+                  This field is required
+                </div>
+                <div class="invalid-feedback" *ngIf="descriptionControl.touched && descriptionControl.errors?.minlength">
+                  Atleast 5 characters are required
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-link" routerLink="/todo">Cancel</button>
+            <button class="btn btn-primary" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+{
+  "todos": [
+    {
+      "id": "bb67c636-61fa-44ca-855d-6b716a897a5a",
+      "text": "Teach NodeJS",
+      "description": "Node is a great server-side tech",
+      "completed": false
+    },
+    {
+      "id": "45e4072c-75df-4bd2-8ead-ca29412e8dbf",
+      "text": "Teach Angular",
+      "description": "Angular is a great tech too",
+      "completed": false
+    },
+    {
+      "id": "9ae07bd4-550b-41af-a376-644f36cbbf56",
+      "text": "Teach TypeScript",
+      "description": "TypeScript is an awesome tech",
+      "completed": false
+    }
+  ]
+}

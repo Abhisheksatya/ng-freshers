@@ -1,0 +1,17 @@
+<div class="row" *ngIf="todo">
+  <div class="col">
+    <div class="card border-dark mb-3">
+      <div class="card-header">
+        <h4>{{ todo.text }}</h4>
+      </div>
+      <div class="card-body text-dark">
+        <div class="card-text">
+          <h6>{{ todo.description }}</h6>
+        </div>
+        <div>
+          <button type="button" class="btn btn-link" routerLink="/todo">Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
