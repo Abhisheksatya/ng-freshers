@@ -17,7 +17,7 @@ npm -v
 ## Clone Repository
 Open terminal and type the following command to clone the repository:
 ```javascript
-git clone https://github.com/innovation-stack/ng-freshers.git
+git clone https://github.com/Abhisheksatya/ng-freshers.git
 ```
 
 ## Install Angular

@@ -7,6 +7,23 @@
     <li class="list-group-item">Apply the "active" class to the row when user clicks on it</li>
   </ul>
   <div class="container your-code">
-    <h6>Remove this &lt;h3&gt; and create your HTML here</h6>
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Type</th>
+          <th scope="col">Description</th>
+          <th scope="col">Completed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let todo of todos" [ngClass]="{active: todo === selectedTodo}" (click)="onClick(todo)" >
+          <td>{{todo.id}}</td>
+          <td>{{todo.type}}</td>
+          <td>{{todo.description}}</td>
+          <td>{{todo.completed}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
